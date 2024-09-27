@@ -28,17 +28,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Función para convertir la imagen en base64
-def get_image_base64(image_path):
-    with open(image_path, "rb") as img_file:
-        encoded = base64.b64encode(img_file.read()).decode()
-    return encoded
 
-# Ruta a la imagen
-image_path = r"C:\Users\b42162\calculadora.png"
-
-# Convertir la imagen a base64
-image_base64 = get_image_base64(image_path)
 
 # Título con imagen a la derecha y fondo verde
 st.markdown(
@@ -64,13 +54,6 @@ st.markdown(
                 PAY PLANNER
             </h1>
         </div>
-        <img src="data:image/png;base64,{image_base64}" alt="Calculadora" style='
-            width: 60px;
-            margin-left: 80px;
-            position: absolute;
-            right: 20px;
-        '>
-    </div>
     """,
     unsafe_allow_html=True
 )
